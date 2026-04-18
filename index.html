@@ -16,11 +16,54 @@
 
 <body>
     <div class="main-container">
-        <header></header>
+        <header>
+            <a href="./" aria-label="Accueil Booki">
+                <img src="./images/logo/Booki.png" alt="Logo Booki">
+            </a>
+            <nav aria-label="Navigation principale">
+                <ul>
+                    <li><a href="#hebergements">Hébergements</a></li>
+                    <li><a href="#activites">Activités</a></li>
+                </ul>
+            </nav>
+        </header>
         <main>
-            <div class="hebergements-and-populaires">
-                <section class="hebergements">
+            <section aria-labelledby="page-title">
+                <h1 id="page-title">Trouvez votre hébergement pour des vacances de rêve</h1>
+                <p>En plein centre-ville ou en pleine nature</p>
+            </section>
 
+            <section aria-label="Recherche et filtres">
+                <form action="#" method="get" aria-label="Formulaire de recherche">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <label for="search-input" class="sr-only">Rechercher une ville</label>
+                    <input id="search-input" name="city" type="search" placeholder="Marseille, France">
+                    <button type="submit">Rechercher</button>
+                </form>
+
+                <div aria-label="Filtres de recherche">
+                    <h3>Filtres</h3>
+                    <ul>
+                        <li><button type="button"><i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
+                                Économique</button></li>
+                        <li><button type="button"><i class="fa-solid fa-person" aria-hidden="true"></i>
+                                Familial</button></li>
+                        <li><button type="button"><i class="fa-solid fa-heart" aria-hidden="true"></i>
+                                Romantique</button></li>
+                        <li><button type="button"><i class="fa-solid fa-fire" aria-hidden="true"></i> Nos
+                                pépites</button></li>
+                    </ul>
+                </div>
+
+                <p>
+                    <i class="fa-solid fa-info" aria-hidden="true"></i> Plus de 500 logements sont disponibles dans
+                    cette ville
+                </p>
+            </section>
+
+            <div class="hebergements-and-populaires">
+                <section class="hebergements" id="hebergements">
+                    <h2 class="section-title">Hébergements à Marseille</h2>
                 </section>
                 <section class="populaires">
                     <div class="populaires-title">
@@ -30,7 +73,8 @@
                     <div class="populaires-cards">
                         <a href="#">
                             <article class="card">
-                                <img src="./images/hebergements/emile-guillemot.jpg" alt="Image de la chambre d'hôtel montrant un lit">
+                                <img src="./images/hebergements/emile-guillemot.jpg"
+                                    alt="Image de la chambre d'hôtel montrant un lit">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Hôtel Le soleil du matin</h3>
@@ -49,7 +93,8 @@
                         </a>
                         <a href="#">
                             <article class="card">
-                                <img src="./images/hebergements/aw-creative.jpg" alt="Image de la chambre d'hôtel montrant un lit">
+                                <img src="./images/hebergements/aw-creative.jpg"
+                                    alt="Image de la chambre d'hôtel montrant un lit">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Chambres d’hôtes Au cœur de l’eau</h3>
@@ -68,7 +113,8 @@
                         </a>
                         <a href="#">
                             <article class="card">
-                                <img src="./images/hebergements/febrian-zakaria2.jpg" alt="Image de la chambre d'hôtel montrant un lit">
+                                <img src="./images/hebergements/febrian-zakaria2.jpg"
+                                    alt="Image de la chambre d'hôtel montrant un lit">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Hôtel Bleu et Blanc</h3>
@@ -89,7 +135,17 @@
                 </section>
             </div>
         </main>
-        <footer></footer>
+        <footer>
+            <section>
+                <h2>À propos</h2>
+            </section>
+            <section>
+                <h2>Nos hébergements</h2>
+            </section>
+            <section>
+                <h2>Assistance</h2>
+            </section>
+        </footer>
     </div>
 </body>
 
