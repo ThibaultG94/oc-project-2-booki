@@ -24,6 +24,11 @@ li {
     padding: 0;
 }
 
+ul,
+ol {
+    list-style: none;
+}
+
 :root {
     --color-blue: #0065FC;
     --color-blue-light: #DEEBFF;
@@ -69,6 +74,62 @@ a {
     clip-path: inset(50%);
     white-space: nowrap;
     border: 0;
+}
+
+/* Header global */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.site-logo {
+    display: inline-flex;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.site-logo img {
+    width: 61px;
+    height: 19px;
+    display: block;
+}
+
+/* Navigation principale */
+.main-nav-list {
+    display: flex;
+}
+
+.main-nav-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 35px;
+    padding: 14px 34px;
+    border-top: 2px solid transparent;
+}
+
+.main-nav-link:hover {
+    color: var(--color-blue);
+    border-top-color: var(--color-blue);
+}
+
+/* Bloc d'introduction */
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 35px;
+}
+
+.intro h1 {
+    font-size: 22px;
+    line-height: 1.3;
+}
+
+.intro p {
+    font-size: 16px;
+    line-height: 1.2;
 }
 
 .section-title {
@@ -204,5 +265,31 @@ a {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    .site-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .site-logo {
+        justify-content: center;
+    }
+
+    .main-nav-list {
+        width: 100%;
+    }
+
+    .main-nav-list li {
+        flex: 1;
+    }
+
+    .main-nav-link {
+        width: 100%;
+        border-top-color: transparent;
+        border-bottom-color: var(--color-grey);
+    }
+
+    .main-nav-link:hover {
+        border-top-color: transparent;
+        border-bottom-color: var(--color-blue);
+    }
 }
