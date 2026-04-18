@@ -33,12 +33,18 @@
                 <p>En plein centre-ville ou en pleine nature</p>
             </section>
 
-            <section aria-label="Recherche et filtres">
-                <form action="#" method="get" aria-label="Formulaire de recherche">
-                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <section class="search-and-filters" aria-label="Recherche et filtres">
+                <form class="search-form" action="#" method="get" aria-label="Formulaire de recherche">
+                    <span class="search-form-location" aria-hidden="true">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    </span>
                     <label for="search-input" class="sr-only">Rechercher une ville</label>
-                    <input id="search-input" name="city" type="search" placeholder="Marseille, France">
-                    <button type="submit">Rechercher</button>
+                    <input id="search-input" class="search-form-input" name="city" type="search"
+                        placeholder="Marseille, France">
+                    <button class="search-form-submit" type="submit"><span
+                            class="search-form-submit-text">Rechercher</span>
+                        <i class="fa-solid fa-magnifying-glass search-form-submit-icon" aria-hidden="true"></i>
+                    </button>
                 </form>
 
                 <div aria-label="Filtres de recherche">
@@ -55,10 +61,12 @@
                     </ul>
                 </div>
 
-                <p>
-                    <i class="fa-solid fa-info" aria-hidden="true"></i> Plus de 500 logements sont disponibles dans
-                    cette ville
-                </p>
+                <div class="search-info" aria-label="Informations sur les logements disponibles">
+                    <span class="search-info-icon" aria-hidden="true">
+                        <i class="fa-solid fa-info"></i>
+                    </span>
+                    <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                </div>
             </section>
 
             <div class="hebergements-and-populaires">
