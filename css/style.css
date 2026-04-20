@@ -72,6 +72,12 @@ a {
     border: 0;
 }
 
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.174;
+}
+
 /****** Header ***********/
 
 /* Global Header */
@@ -133,162 +139,103 @@ header ul {
     background-color: var(--main-color);
 }
 
-/* Bloc d'introduction */
-.intro {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 35px;
-}
-
-.intro h1 {
-    font-size: 22px;
-    line-height: 1.3;
-}
-
-.intro p {
-    font-size: 16px;
-    line-height: 1.2;
-}
-
-/* Formulaire de recherche */
-.search-and-filters {
+/****** Search And Filters ***********/
+.search {
     display: flex;
     flex-direction: column;
     gap: 35px;
+    margin-bottom: 35px;
+}
+
+.search-headline {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.search-headline p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.174;
 }
 
 .search-form {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    max-width: 377px;
-    border: 1px solid var(--color-grey);
-    border-radius: 15px;
-    overflow: hidden;
+    width: 377px;
+    height: 49px;
+    gap: 0;
 }
 
 .search-form-location {
     width: 50px;
     height: 49px;
+    border-radius: 15px 0 0 15px;
+    background-color: var(--main-bg-color);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-grey);
+    flex-shrink: 0;
+}
+
+.search-form-location .fa-location-dot {
     color: #000000;
     font-size: 18px;
 }
 
 .search-form-input {
+    width: auto;
     flex: 1;
     min-width: 0;
-    height: 49px;
     border: none;
-    padding: 0 24px;
+    border-top: 1px solid var(--main-bg-color);
+    border-bottom: 1px solid var(--main-bg-color);
+    height: 49px;
     font-size: 18px;
     font-weight: 700;
+    line-height: 1.174;
     color: #000000;
+    padding: 0 24px;
 }
 
 .search-form-input::placeholder {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.174;
     color: #000000;
     opacity: 1;
 }
 
-.search-form-input:focus-visible {
-    outline: 2px solid var(--color-blue);
-    outline-offset: -2px;
-}
-
-.search-form-submit {
-    height: 49px;
+.search-form-button {
     border: none;
     border-radius: 0 15px 15px 0;
-    padding: 0 14px;
-    background-color: var(--color-blue);
-    color: var(--color-white);
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.search-form-submit-icon {
-    display: none;
-}
-
-.search-info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.search-info-icon {
-    width: 24px;
-    height: 24px;
-    border: 1px solid #D9D9D9;
-    border-radius: 50%;
+    background-color: var(--main-color);
+    color: #FFFFFF;
+    height: 49px;
+    padding: 15px 16px;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    color: var(--color-blue);
-    font-size: 12px;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.174;
+    cursor: pointer;
     flex-shrink: 0;
 }
 
-.search-info p {
-    font-size: 16px;
-    line-height: 1.3;
-}
-
-/* Filtres */
-.search-filters {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.search-filters-title {
-    font-size: 18px;
-    line-height: 1.2;
-}
-
-.search-filters-list {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.search-filter-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    min-height: 50px;
-    padding: 4px 19px;
-    border: 2px solid #D9D9D9;
-    border-radius: 25px;
-    background-color: var(--color-white);
+.search-form-button-icon {
+    display: none;
+    color: #FFFFFF;
     font-size: 17px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
 }
 
-.search-filter-button:hover {
-    background-color: var(--color-blue-light);
-}
-
-.search-filter-icon {
-    color: var(--color-blue);
-    font-size: 22px;
+.search-form-button:focus-visible,
+.search-form-input:focus-visible {
+    outline: 2px solid var(--main-color);
+    outline-offset: 2px;
 }
 
 /* Section Hébergement Marseille */
-
-.section-title {
-    margin: 0;
-    font-size: 22px;
-}
 
 .card {
     height: 100%;
@@ -489,35 +436,36 @@ header ul {
         border-bottom-color: var(--color-blue);
     }
 
+    .search {
+        margin-bottom: 35px;
+    }
+
     .search-form {
-        max-width: 100%;
+        width: 100%;
+        gap: 0;
     }
 
-    .search-form-submit {
+    .search-form-input {
+        width: auto;
+        flex: 1;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .search-form-button {
         width: 49px;
-        padding: 0;
+        padding: 15px 16px;
         border-radius: 15px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        margin-left: -15px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
-    .search-form-submit-text {
+    .search-form-button-text {
         display: none;
     }
 
-    .search-form-submit-icon {
+    .search-form-button-icon {
         display: inline-block;
-    }
-
-    .search-filters {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .search-filters-list {
-        gap: 10px;
     }
 
     .hebergements-and-populaires {
