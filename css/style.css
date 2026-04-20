@@ -1,4 +1,4 @@
-/****** General ***********/
+/****** Général ***********/
 * {
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
@@ -231,8 +231,19 @@ header ul {
 
 .search-form-button:focus-visible,
 .search-form-input:focus-visible {
-    outline: 2px solid var(--main-color);
-    outline-offset: 2px;
+    outline: none;
+}
+
+.search-form-input:focus-visible {
+    box-shadow: none;
+    outline: 2px solid #D9D9D9;
+    outline-offset: -2px;
+}
+
+.search-form-button:focus-visible {
+    box-shadow: none;
+    outline: 2px solid #D9D9D9;
+    outline-offset: -2px;
 }
 
 .filters {
@@ -316,46 +327,34 @@ header ul {
     line-height: 1;
 }
 
-/* Section Hébergement Marseille */
+/* ---- Common card base ---- */
 
 .card {
-    height: 100%;
-    background-color: white;
+    background-color: #FFFFFF;
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    overflow: hidden;
 }
 
 .card img {
-    width: 100%;
-    height: 124px;
     object-fit: cover;
-    border-radius: 15px 15px 0 0;
-    display: block;
-}
-
-.card-content {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 4px 10px;
-}
-
-.card-subtitle {
-    font-size: 14px;
-    line-height: 1.2;
 }
 
 .card-title {
     font-size: 16px;
-    line-height: 1.2;
+    font-weight: 700;
+    line-height: 1.174;
+}
+
+.card-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.174;
 }
 
 .card-rating {
     display: flex;
-    gap: 2px;
-    color: var(--color-blue);
+    align-items: center;
 }
 
 .euro {
@@ -366,40 +365,86 @@ header ul {
     color: var(--main-bg-color)
 }
 
-.hebergements-more {
-    display: inline-block;
-    margin-top: 30px;
-    font-size: 18px;
-    font-weight: 700;
-}
 
-/****** Hebergements And Populaires ***********/
+/****** Populaire and Hebergements — General Layout *****/
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+    gap: 30px;
 }
 
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 30px;
-    box-sizing: border-box;
 }
 
-/****** Hebergements ***********/
+/****** Hebergements *****/
 .hebergements {
     width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hebergements .section-title {
+    margin-bottom: 0;
 }
 
 .hebergements-cards {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 30px;
-    margin-top: 30px;
 }
 
 .card-link {
     display: block;
+}
+
+.hebergements-cards .card {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 15px;
+    gap: 4px;
+}
+
+.hebergements-cards img {
+    width: 100%;
+    height: 124px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    border: 5px solid #FFFFFF;
+}
+
+.hebergements-cards .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 15px;
+}
+
+.hebergements-cards .card-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hebergements-cards .card-rating {
+    width: 81px;
+    height: 13.25px;
+    justify-content: space-between;
+}
+
+.hebergements-cards .card-rating .fa-star {
+    font-size: 13.25px;
+    line-height: 13.25px;
+}
+
+.hebergements-more {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.174;
 }
 
 /****** Populaires ***********/
@@ -415,18 +460,25 @@ header ul {
 
 .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
+    margin-top: 0;
+}
+
+.populaires-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
 }
 
 .populaires-cards img {
-    width: 33%;
+    width: 123px;
     height: 136px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
 
 .populaires-cards .card-content {
-    width: 67%;
+    width: calc(100% - 123px);
     padding-left: 15px;
     display: flex;
     flex-direction: column;
@@ -445,6 +497,14 @@ header ul {
 
 .populaires-cards .card-rating {
     margin-bottom: 5px;
+    width: 68px;
+    height: 12px;
+    justify-content: space-between;
+}
+
+.populaires-cards .card-rating .fa-star {
+    font-size: 12px;
+    line-height: 12px;
 }
 
 
@@ -490,6 +550,14 @@ header ul {
 
     .populaires-cards a {
         width: 30%;
+    }
+
+    .populaires-cards img {
+        width: 33%;
+    }
+
+    .populaires-cards .card-content {
+        width: 67%;
     }
 
     .populaires-cards .card-title {
