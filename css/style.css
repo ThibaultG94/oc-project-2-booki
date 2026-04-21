@@ -507,6 +507,42 @@ header ul {
     line-height: 12px;
 }
 
+/****** Activités ***********/
+.activities {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.activities-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.activities-cards .card {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.activities-cards img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.activities-cards .card-content {
+    display: flex;
+    align-items: center;
+    padding: 20px 19px;
+}
+
 
 
 
@@ -566,6 +602,14 @@ header ul {
 
     .populaires-cards .card-subtitle {
         font-size: 13px;
+    }
+
+    .activities-cards img {
+        height: 200px;
+    }
+
+    .activities-cards .card-content {
+        min-height: 70px;
     }
 }
 
@@ -678,5 +722,27 @@ header ul {
 
     .hebergements-more {
         margin-top: 15px;
+    }
+
+    .activities {
+        margin-top: 15px;
+        margin-left: -50px;
+        margin-right: -50px;
+        width: calc(100% + 100px);
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .activities-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .activities-cards img {
+        height: 141px;
+    }
+
+    .activities-cards .card-content {
+        min-height: 59px;
     }
 }
