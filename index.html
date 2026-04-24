@@ -22,8 +22,8 @@
             </a>
             <nav aria-label="Navigation principale">
                 <ul>
-                    <li><a class="nav-link nav-link-active" href="#">Hébergements</a></li>
-                    <li><a class="nav-link" href="#">Activités</a></li>
+                    <li><a class="nav-link nav-link-active" href="#hebergements">Hébergements</a></li>
+                    <li><a class="nav-link" href="#activites">Activités</a></li>
                 </ul>
             </nav>
         </header>
@@ -50,28 +50,32 @@
                     <h2 class="filters-title">Filtres</h2>
                     <ul class="filters-list">
                         <li class="filter-item">
-                            <button class="filter-button" type="button">
+                            <input type="checkbox" id="filter-eco" class="filter-checkbox sr-only">
+                            <label class="filter-button" for="filter-eco">
                                 <i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
                                 <span>Économique</span>
-                            </button>
+                            </label>
                         </li>
                         <li class="filter-item">
-                            <button class="filter-button" type="button">
+                            <input type="checkbox" id="filter-fam" class="filter-checkbox sr-only">
+                            <label class="filter-button" for="filter-fam">
                                 <i class="fa-solid fa-person" aria-hidden="true"></i>
                                 <span>Familial</span>
-                            </button>
+                            </label>
                         </li>
                         <li class="filter-item">
-                            <button class="filter-button" type="button">
+                            <input type="checkbox" id="filter-rom" class="filter-checkbox sr-only">
+                            <label class="filter-button" for="filter-rom">
                                 <i class="fa-solid fa-heart" aria-hidden="true"></i>
                                 <span>Romantique</span>
-                            </button>
+                            </label>
                         </li>
                         <li class="filter-item">
-                            <button class="filter-button is-active" type="button">
+                            <input type="checkbox" id="filter-pep" class="filter-checkbox sr-only" checked>
+                            <label class="filter-button" for="filter-pep">
                                 <i class="fa-solid fa-fire" aria-hidden="true"></i>
                                 <span>Nos pépites</span>
-                            </button>
+                            </label>
                         </li>
                     </ul>
                 </div>
@@ -91,8 +95,7 @@
                     <div class="hebergements-cards">
                         <a class="card-link" href="#">
                             <article class="card">
-                                <img src="./images/hebergements/fred-kleber.jpg"
-                                    alt="Image de la chambre d'hôtel montrant un lit">
+                                <img src="./images/hebergements/fred-kleber.jpg" alt="Chambre de l'Hôtel du port">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Hôtel du port</h3>
@@ -112,7 +115,7 @@
                         <a class="card-link" href="#">
                             <article class="card">
                                 <img src="./images/hebergements/febrian-zakaria.jpg"
-                                    alt="Image de la chambre d'hôtel montrant un lit">
+                                    alt="Chambre de l'Hôtel Chez Amina">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Hôtel Chez Amina</h3>
@@ -131,8 +134,7 @@
                         </a>
                         <a class="card-link" href="#">
                             <article class="card">
-                                <img src="./images/hebergements/reisetopia.jpg"
-                                    alt="Image de la chambre d'hôtel montrant un lit">
+                                <img src="./images/hebergements/reisetopia.jpg" alt="Chambre de l'Hôtel Les mouettes">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Hôtel Les mouettes</h3>
@@ -151,8 +153,7 @@
                         </a>
                         <a class="card-link" href="#">
                             <article class="card">
-                                <img src="./images/hebergements/annie-spratt.jpg"
-                                    alt="Image de la chambre d'hôtel montrant un lit">
+                                <img src="./images/hebergements/annie-spratt.jpg" alt="Chambre de l'Hôtel de la mer">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Hôtel de la mer</h3>
@@ -172,7 +173,7 @@
                         <a class="card-link" href="#">
                             <article class="card">
                                 <img src="./images/hebergements/marcus-loke.jpg"
-                                    alt="Image de la chambre d'hôtel montrant un lit">
+                                    alt="Chambre de l'Auberge La Canebière">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Auberge La Canebière</h3>
@@ -191,8 +192,7 @@
                         </a>
                         <a class="card-link" href="#">
                             <article class="card">
-                                <img src="./images/hebergements/nicate-lee.jpg"
-                                    alt="Image de la chambre d'hôtel montrant un lit">
+                                <img src="./images/hebergements/nicate-lee.jpg" alt="Chambre de l'Auberge Le Panier">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Auberge Le Panier</h3>
@@ -283,7 +283,7 @@
                 </section>
             </div>
 
-            <section class="activities" aria-label="Activités à Marseille">
+            <section class="activities" id="activites" aria-label="Activités à Marseille">
                 <h2 class="section-title">Activités à Marseille</h2>
                 <div class="activities-cards">
                     <a class="card-link" href="#">
@@ -327,30 +327,32 @@
         </main>
 
         <footer>
-            <div class="footer-column">
-                <h2 class="footer-title">À propos</h2>
-                <ul class="footer-links">
-                    <li><a href="#">Fonctionnement du site</a></li>
-                    <li><a href="#">Conditions générales</a></li>
-                    <li><a href="#">Données et confidentialité</a></li>
-                </ul>
-            </div>
+            <nav class="footer-nav" aria-label="Pied de page">
+                <div class="footer-column">
+                    <h2 class="footer-title">À propos</h2>
+                    <ul class="footer-links">
+                        <li><a href="#">Fonctionnement du site</a></li>
+                        <li><a href="#">Conditions générales</a></li>
+                        <li><a href="#">Données et confidentialité</a></li>
+                    </ul>
+                </div>
 
-            <div class="footer-column">
-                <h2 class="footer-title">Nos hébergements</h2>
-                <ul class="footer-links">
-                    <li><a href="#">Charte qualité</a></li>
-                    <li><a href="#">Proposer votre hôtel</a></li>
-                </ul>
-            </div>
+                <div class="footer-column">
+                    <h2 class="footer-title">Nos hébergements</h2>
+                    <ul class="footer-links">
+                        <li><a href="#">Charte qualité</a></li>
+                        <li><a href="#">Proposer votre hôtel</a></li>
+                    </ul>
+                </div>
 
-            <div class="footer-column">
-                <h2 class="footer-title">Assistance</h2>
-                <ul class="footer-links">
-                    <li><a href="#">Centre d’aide</a></li>
-                    <li><a href="#">Nous contacter</a></li>
-                </ul>
-            </div>
+                <div class="footer-column">
+                    <h2 class="footer-title">Assistance</h2>
+                    <ul class="footer-links">
+                        <li><a href="#">Centre d'aide</a></li>
+                        <li><a href="#">Nous contacter</a></li>
+                    </ul>
+                </div>
+            </nav>
         </footer>
     </div>
 </body>
