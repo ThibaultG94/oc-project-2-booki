@@ -14,7 +14,7 @@ Booki permet aux usagers de trouver des hébergements et des activités dans la 
 
 - **Header** : logo et navigation avec indication visuelle au survol et sur la page active
 - **Barre de recherche** : formulaire avec champ éditable et bouton (texte « Rechercher » sur desktop, icône loupe sur mobile)
-- **Filtres** : boutons thématiques avec changement d'état au survol et au focus clavier
+- **Filtres** : boutons thématiques avec changement d'état au survol et au focus
 - **Section Hébergements** : grille de 6 cartes + encart _Les plus populaires_
 - **Section Activités** : 4 cartes en colonnes
 - **Footer** : 3 colonnes de liens
@@ -56,7 +56,7 @@ Booki/
 Cloner le dépôt et ouvrir `index.html` dans un navigateur :
 
 ```bash
-git clone <url-du-repo>
+git clone https://github.com/ThibaultG94/oc-project-2-booki
 cd booki
 ```
 
